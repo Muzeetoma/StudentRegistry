@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="MainPage" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.HelloController">
+
+    <fx:include fx:id="UserPage" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" source="users.fxml" />
+   <VBox fx:id="LoginPage" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #ffffff;" StackPane.alignment="CENTER">
+      <children>
+         <VBox alignment="BOTTOM_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="350.0" VBox.vgrow="NEVER">
+            <children>
+               <Label text="Log In">
+                  <font>
+                     <Font size="48.0" />
+                  </font>
+               </Label>
+            </children>
+         </VBox>
+         <VBox maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="350.0" VBox.vgrow="NEVER">
+            <children>
+               <TextField fx:id="emailField" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="70.0" prefWidth="50.0" promptText="Email" style="-fx-border-color: #eee; -fx-background-color: transparent;" />
+               <PasswordField fx:id="passwordField" prefHeight="70.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #eee;">
+                  <VBox.margin>
+                     <Insets top="30.0" />
+                  </VBox.margin>
+               </PasswordField>
+            </children>
+            <VBox.margin>
+               <Insets top="10.0" />
+            </VBox.margin>
+         </VBox>
+         <VBox maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="350.0" VBox.vgrow="NEVER">
+            <children>
+               <Button maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#LoginClicked" prefHeight="60.0" style="-fx-background-color: royalblue;" text="LogIn" textFill="WHITE">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets top="10.0" />
+                  </VBox.margin>
+               </Button>
+               <Label fx:id="message" maxWidth="1.7976931348623157E308" prefHeight="10.0" textFill="#c93939">
+                  <VBox.margin>
+                     <Insets top="10.0" />
+                  </VBox.margin>
+                  <padding>
+                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  </padding>
+               </Label>
+            </children>
+         </VBox>
+      </children></VBox>
+</StackPane>
